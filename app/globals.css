@@ -1,26 +1,33 @@
 @import "tailwindcss";
 
+@theme {
+  --color-parchment: #F5F0E6;
+  --color-ink: #1B1B1B;
+  --color-bardo-purple: #4B2E66;
+  --color-wood: #7A5336;
+  --color-gold: #B08D3C;
+  --color-wine: #6B2A2E;
+
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #F5F0E6;
+  --foreground: #1B1B1B;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+}
+
+.parchment-texture {
+  background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+  background-repeat: repeat;
+  opacity: 0.05;
 }

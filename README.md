@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# O Bardo Barbado 🍺📜
 
-## Getting Started
+Um blog/CMS focado em contos de fantasia com humor e referências do mundo moderno em "roupagem medieval". Acompanhe as crônicas de **Glockenspiel**, um bardo anão com mania de grandeza e fraqueza por apostas.
 
-First, run the development server:
+## 🚀 Tecnologias
+
+- **Next.js 15 (App Router)**
+- **TypeScript**
+- **Tailwind CSS 4** (Design Minimal Modern Fantasy)
+- **Framer Motion** (Animações suaves)
+- **Sanity CMS** (Headless CMS com fallback para dados Mock)
+- **Lucide React** (Ícones minimalistas)
+
+## 🎨 Direção de Arte
+
+- **Paleta**: Pergaminho (#F5F0E6), Roxo Bardo (#4B2E66), Madeira (#7A5336), Ouro (#B08D3C).
+- **Tipografia**: Serif (Playfair Display) para títulos, Sans (Instrument Sans) para conteúdo.
+- **Estilo**: Minimalista, elegante, focado na legibilidade.
+
+## 🛠️ Configuração
+
+### 1. Instalação
+
+```bash
+npm install
+```
+
+### 2. CMS (Sanity)
+
+Este projeto está pronto para Sanity. Se você já tem um projeto no Sanity:
+1. Crie as variáveis de ambiente no arquivo `.env.local`:
+   ```bash
+   NEXT_PUBLIC_SANITY_PROJECT_ID=seu_id_aqui
+   NEXT_PUBLIC_SANITY_DATASET=production
+   ```
+2. O esquema do CMS está localizado em `/sanity/schemas/conto.ts`.
+
+**Nota**: Se as variáveis não forem fornecidas, o site funcionará perfeitamente usando **dados mock** localizados em `lib/mock-data.ts`.
+
+### 3. Rodar Localmente
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📂 Estrutura de Páginas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `/`: Home com destaques, hero e trova de apresentação.
+- `/contos`: Lista completa com busca, filtros por tag e ordenação.
+- `/contos/[slug]`: Leitura focada com Notas do Bardo e navegação.
+- `/sobre`: Biografia de Glockenspiel e proposta do projeto.
+- `/newsletter`: Inscrição para a "Gazette da Taverna".
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ✨ Funcionalidades
 
-## Learn More
+- **SEO Otimizado**: Metadados dinâmicos, sitemap e robots.txt.
+- **Acessibilidade**: HTML semântico e contrastes adequados.
+- **Performance**: Lighthouse-friendly, imagens otimizadas e renderização híbrida.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+"Sente-se à mesa, peça um hidromel e boa leitura." — Glockenspiel
