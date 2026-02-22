@@ -33,7 +33,7 @@ export default async function Home() {
                 <span className="text-bardo-purple">mundos longos.</span>
               </h1>
               <p className="text-lg md:text-xl text-ink/70 font-sans">
-                Glockenspiel, o bardo anão, traduz o caos do século XXI para o aço e a magia das terras medievais.
+                Glockenspiel, o bardo barbado, traduz o caos do século XXI para o aço e a magia das terras medievais.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 mt-6 md:mt-8">
                 <Link
@@ -61,12 +61,25 @@ export default async function Home() {
         <section className="py-12 bg-white/30">
           <div className="container mx-auto px-4 max-w-3xl">
             <Accordion title="A Trova de Apresentação" defaultOpen>
-              {`Sente-se à mesa, forasteiro cansado,
-Escalpo de anão, xilofone ao lado.
-Canto o presente em rima antiga,
-Onde o dragão voa e o Wi-Fi intriga.
-Beba um hidromel, ignore o boleto,
-Pois Glockenspiel traz o verso completo.`}
+              {`Nobres aventureiros, ouçam com atenção! 
+              Irei entoar a vocês, agora, minha trova de apresentação. 
+              Eu ergo minha caneca para um brinde a todos. Saúde!!! 
+              Eu toco o meu xilofone porque não consigo tocar o alaúde.
+
+              Mas não se deixem enganar, eu ainda tenho o meu valor. 
+              Além de tocar xilofone também toco gaita de fole e tambor. 
+              Confesso que bebo um pouco. Me digam quem é que não gosta? 
+              Minha verdadeira fraqueza está na boa e velha mesa de apostas. 
+              
+              Na forja já trabalhei, armaduras e armas forjei. 
+              Mas pelas canções e histórias de um bardo bastardo foi que eu me encantei. 
+              Com ele decidi partir, eu queria o mundo desbravar. 
+              Mas hoje eu vivo vagando, ouvindo e contando histórias de bar.
+
+              Essa é minha trajetória quer vocês gostem ou não. 
+              Me chamam de 'o Bardo Barbado', um ser carismático ainda que anão. 
+              Meu nome é Glockenspiel e conhecê-los foi um imenso prazer. 
+              Agora se me derem licença eu vou logo ali pra taverna beber.`}
             </Accordion>
           </div>
         </section>
