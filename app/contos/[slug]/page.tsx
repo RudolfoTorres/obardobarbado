@@ -7,6 +7,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PortableText } from "@portabletext/react";
 import { components } from "@/components/portable-text";
+import { ShareButton } from "@/components/ShareButton";
 
 export async function generateStaticParams() {
   const contos = await getContos();
@@ -66,10 +67,7 @@ export default async function TaleDetailPage({ params }: PageProps) {
                   {conto.readingTime} min de leitura
                 </span>
                 <div className="flex-grow md:text-right">
-                  <button className="inline-flex items-center gap-2 hover:text-bardo-purple transition-colors">
-                    <Share2 className="w-4 h-4" />
-                    Compartilhar
-                  </button>
+                    <ShareButton title={conto.title} />
                 </div>
               </div>
             </header>
