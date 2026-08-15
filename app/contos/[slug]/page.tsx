@@ -51,7 +51,7 @@ export default async function TaleDetailPage({ params }: PageProps) {
             {/* Header */}
             <header className="mb-12">
               <div className="flex flex-wrap gap-2 mb-6">
-                {(conto.tags || []).map((tag) => (
+                {(conto.tags || []).map((tag: string) => (
                   <Badge key={tag}>{tag}</Badge>
                 ))}
               </div>

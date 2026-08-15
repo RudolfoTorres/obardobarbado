@@ -1,4 +1,6 @@
+// lib/sanity.ts
 import { createClient } from "next-sanity";
+import { Conto } from "@/types"; // Importa a interface unificada de types/index.ts
 
 export const client = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
@@ -8,6 +10,8 @@ export const client = createClient({
 });
 
 const USE_MOCK = process.env.NEXT_PUBLIC_USE_MOCK === "true";
+
+const MOCK_CONTOS: Conto[] = [];
 
 export async function getContos(): Promise<Conto[]> {
   if (USE_MOCK) return MOCK_CONTOS;
@@ -30,7 +34,7 @@ export async function getContos(): Promise<Conto[]> {
 
 export async function getContoBySlug(slug: string): Promise<Conto | null> {
   if (USE_MOCK) {
-    return MOCK_CONTOS.find((c) => c.slug.current === slug) || null;
+    return MOCK_CONTOS.find((c) => c.slug?.current === slug) || null;
   }
 
   const query = `*[_type == "conto" && slug.current == $slug][0] {
@@ -39,7 +43,6 @@ export async function getContoBySlug(slug: string): Promise<Conto | null> {
     "coverImage": coverImage.asset->url
   }`;
 
-  // Passa o objeto { slug } para substituir a variável $slug na consulta
   return await client.fetch(query, { slug });
 }
 
