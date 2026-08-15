@@ -18,7 +18,7 @@ export const TaleCard = ({ conto, index }: { conto: Conto; index: number }) => {
             className="group relative bg-parchment border border-wood/20 p-6 rounded-sm hover:border-bardo-purple/40 transition-colors"
         >
             <div className="flex flex-wrap gap-2 mb-4">
-                {conto.tags.slice(0, 3).map((tag) => (
+                {(conto.tags || []).slice(0, 3).map((tag) => (
                     <Badge key={tag}>{tag}</Badge>
                 ))}
             </div>
