@@ -5,8 +5,7 @@ import { HeroMascot } from "@/components/hero-mascot";
 import { getContos, getFeaturedContos } from "@/lib/sanity";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import Image from "next/image";
-import { Sparkles, Scroll, Star } from "lucide-react";
+import { Sparkles, Star } from "lucide-react";
 
 export default async function Home() {
   const latestContos = await getContos();
@@ -21,39 +20,56 @@ export default async function Home() {
 
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="relative flex flex-col justify-center min-h-[calc(100svh-80px)] border-b border-wood/10 pt-10 md:pt-16 pb-12 md:pb-16 overflow-hidden">
+        <section className="relative flex flex-col justify-center min-h-0 md:min-h-[calc(100svh-80px)] border-b border-wood/10 pt-8 pb-12 md:py-16 overflow-hidden">
           <Container className="max-w-6xl grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div className="space-y-6 md:space-y-8 max-w-xl">
+            
+            <div className="flex flex-col items-start space-y-6 md:space-y-8 max-w-xl">
+              {/* 1. Badge */}
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-gold/10 text-gold rounded-full text-sm font-sans">
                 <Sparkles className="w-4 h-4" />
                 <span>O Bardo das Crônicas Modernas</span>
               </div>
+
+              {/* 2. Título */}
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight">
                 Baladas curtas,<br />
                 <span className="text-bardo-purple">mundos longos.</span>
               </h1>
+
+              {/* 3. Subtítulo */}
               <p className="text-lg md:text-xl text-ink/70 font-sans">
                 Glockenspiel, o bardo barbado, traduz o caos do século XXI para o aço e a magia das terras medievais.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 mt-6 md:mt-8">
+
+              {/* 4. Mascot APENAS NO MOBILE (entre a descrição e os botões) */}
+              <div className="md:hidden w-full flex justify-center py-2">
+                <div className="w-44">
+                  <HeroMascot />
+                </div>
+              </div>
+
+              {/* 5. Botões de Ação */}
+              <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto pt-2">
                 <Link
                   href={`/contos/${lastConto?.slug.current || ""}`}
-                  className={cn(buttonVariants.base, buttonVariants.variant.primary, buttonVariants.size.lg, "w-full sm:w-auto")}
+                  className={cn(buttonVariants.base, buttonVariants.variant.primary, buttonVariants.size.lg, "w-full sm:w-auto text-center")}
                 >
                   Ler o último conto
                 </Link>
                 <Link
                   href="/newsletter"
-                  className={cn(buttonVariants.base, buttonVariants.variant.outline, buttonVariants.size.lg, "w-full sm:w-auto")}
+                  className={cn(buttonVariants.base, buttonVariants.variant.outline, buttonVariants.size.lg, "w-full sm:w-auto text-center")}
                 >
                   Assinar a Gazette
                 </Link>
               </div>
             </div>
 
-            <div className="hidden md:block">
+            {/* Mascot NO DESKTOP (na coluna da direita em tamanho total) */}
+            <div className="hidden md:block w-full">
               <HeroMascot />
             </div>
+
           </Container>
         </section>
 
@@ -62,24 +78,24 @@ export default async function Home() {
           <div className="container mx-auto px-4 max-w-3xl">
             <Accordion title="A Trova de Apresentação" defaultOpen>
               {`Nobres aventureiros, ouçam com atenção! 
-              Irei entoar a vocês, agora, minha trova de apresentação. 
-              Eu ergo minha caneca para um brinde a todos. Saúde!!! 
-              Eu toco o meu xilofone porque não consigo tocar o alaúde.
+                Irei entoar a vocês, agora, minha trova de apresentação. 
+                Eu ergo minha caneca para um brinde a todos. Saúde!!! 
+                Eu toco o meu xilofone porque não consigo tocar o alaúde.
 
-              Mas não se deixem enganar, eu ainda tenho o meu valor. 
-              Além de tocar xilofone também toco gaita de fole e tambor. 
-              Confesso que bebo um pouco. Me digam quem é que não gosta? 
-              Minha verdadeira fraqueza está na boa e velha mesa de apostas. 
-              
-              Na forja já trabalhei, armaduras e armas forjei. 
-              Mas pelas canções e histórias de um bardo bastardo foi que eu me encantei. 
-              Com ele decidi partir, eu queria o mundo desbravar. 
-              Mas hoje eu vivo vagando, ouvindo e contando histórias de bar.
+                Mas não se deixem enganar, eu ainda tenho o meu valor. 
+                Além de tocar xilofone também toco gaita de fole e tambor. 
+                Confesso que bebo um pouco. Me digam quem é que não gosta? 
+                Minha verdadeira fraqueza está na boa e velha mesa de apostas. 
 
-              Essa é minha trajetória quer vocês gostem ou não. 
-              Me chamam de 'o Bardo Barbado', um ser carismático ainda que anão. 
-              Meu nome é Glockenspiel e conhecê-los foi um imenso prazer. 
-              Agora se me derem licença eu vou logo ali pra taverna beber.`}
+                Na forja já trabalhei, armaduras e armas forjei. 
+                Mas pelas canções e histórias de um bardo bastardo foi que eu me encantei. 
+                Com ele decidi partir, eu queria o mundo desbravar. 
+                Mas hoje eu vivo vagando, ouvindo e contando histórias de bar.
+
+                Essa é minha trajetória quer vocês gostem ou não. 
+                Me chamam de 'o Bardo Barbado', um ser carismático ainda que anão. 
+                Meu nome é Glockenspiel e conhecê-los foi um imenso prazer. 
+                Agora se me derem licença eu vou logo ali pra taverna beber.`}
             </Accordion>
           </div>
         </section>
