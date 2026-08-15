@@ -10,7 +10,7 @@ const NAV_ITEMS = [
   { name: "Início", href: "/", icon: Home },
   { name: "Contos", href: "/contos", icon: PenTool },
   { name: "Sobre", href: "/sobre", icon: Info },
-  { name: "Newsletter", href: "/newsletter", icon: Mail },
+  //{ name: "Newsletter", href: "/newsletter", icon: Mail }, A validar metodologia de negócio //
 ];
 
 export const Header = () => {

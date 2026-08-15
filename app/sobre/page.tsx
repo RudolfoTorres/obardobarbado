@@ -17,7 +17,7 @@ export default function AboutPage() {
             <main className="flex-grow py-20">
                 <Container className="max-w-4xl">
                     <section className="mb-24">
-                        <h1 className="text-5xl font-bold mb-12">O Bardo, O Mito, A Barba</h1>
+                        <h1 className="text-5xl font-bold mb-12">O Bardo, A Lenda, A Barba</h1>
 
                         <div className="grid md:grid-cols-2 gap-12 items-start mb-16">
                             <div className="space-y-6 font-sans text-ink/80 text-lg leading-relaxed">
