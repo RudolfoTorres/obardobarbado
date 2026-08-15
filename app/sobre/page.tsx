@@ -1,6 +1,7 @@
 import { Header, Footer, Container } from "@/components/layout-components";
 import { Beer, Drum, Music, Dice5 } from "lucide-react";
 import Image from "next/image";
+import glockenspielPortrait from "@/public/images/Glock-oleo.jpg"; // Certifique-se de ter a imagem no caminho correto
 
 export const metadata = {
     title: "Sobre | O Bardo Barbado",
@@ -33,7 +34,7 @@ export default function AboutPage() {
                                     </div>
                                     <div className="flex items-center gap-2">
                                         <Beer className="w-5 h-5 text-wood" />
-                                        <span>Hidromel Ipa</span>
+                                      <span>Hidromel Ipa</span>
                                     </div>
                                     <div className="flex items-center gap-2">
                                         <Drum className="w-5 h-5 text-wood" />
@@ -45,10 +46,12 @@ export default function AboutPage() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="relative aspect-square bg-wood/10 rounded-sm border-2 border-wood/20 p-4">
-                                <div className="w-full h-full bg-parchment border border-wood/10 flex items-center justify-center italic text-wood/30 text-center p-8">
-                                    [Retrato a óleo de Glockenspiel segurando seu xilofone místico]
-                                </div>
+                            <div className="relative p-4">
+                                <Image
+                                    src={glockenspielPortrait}
+                                    alt="Retrato a óleo de Glockenspiel segurando seu xilofone místico"
+                                    className="w-full h-full object-contain rounded-sm"
+                                />
                             </div>
                         </div>
                     </section>
@@ -61,12 +64,33 @@ export default function AboutPage() {
                     </section>
 
                     <section>
-                        <h2 className="text-3xl font-serif font-bold mb-8">O Autor (por trás da cortina)</h2>
-                        <div className="flex flex-col md:flex-row gap-12 items-center">
-                            <div className="w-24 h-24 bg-gold/20 rounded-full flex-shrink-0 flex items-center justify-center text-4xl">✒️</div>
-                            <p className="font-sans text-ink/80 text-lg leading-relaxed italic">
-                                Um entusiasta de fantasia, humor e boa literatura que decidiu dar voz a um anão rabugento porém carismático. Este projeto é um experimento de world-building e narrativas curtas.
-                            </p>
+                        <h2 className="text-3xl font-serif font-bold mb-8">Os Autores (por trás da cortina)</h2>
+                        <div className="grid md:grid-cols-2 gap-8">
+                            <div className="flex gap-4 items-start bg-wood/5 p-6 rounded-sm border border-wood/10">
+                                <div className="w-16 h-16 bg-gold/20 rounded-full flex-shrink-0 flex items-center justify-center text-2xl">
+                                    ⚙️
+                                </div>
+                                <div>
+                                    <h3 className="font-serif text-xl font-bold text-bardo-purple mb-1">Rudolfo Torres</h3>
+                                    <p className="text-sm font-semibold text-wood mb-2">Idealizador do Blog & Personagem</p>
+                                    <p className="font-sans text-ink/80 text-sm leading-relaxed">
+                                        Arquiteto por trás do universo de Glockenspiel. Responsável pelo world-building, conceito do blog e pela concepção deste anão rabugento e carismático.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="flex gap-4 items-start bg-wood/5 p-6 rounded-sm border border-wood/10">
+                                <div className="w-16 h-16 bg-gold/20 rounded-full flex-shrink-0 flex items-center justify-center text-2xl">
+                                    ✒️
+                                </div>
+                                <div>
+                                    <h3 className="font-serif text-xl font-bold text-bardo-purple mb-1">Yuri Dupim</h3>
+                                    <p className="text-sm font-semibold text-wood mb-2">Escritor Principal</p>
+                                    <p className="font-sans text-ink/80 text-sm leading-relaxed">
+                                        A pena que dá vida às crônicas. Responsável por traduzir os causos, sátiras e aventuras cotidianas do bardo em narrativas marcantes.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </section>
                 </Container>
