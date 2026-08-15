@@ -1,6 +1,5 @@
-// lib/sanity.ts
 import { createClient } from "next-sanity";
-import { Conto } from "@/types"; // Importa a interface unificada de types/index.ts
+import { Conto } from "@/types";
 
 export const client = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
@@ -29,7 +28,7 @@ export async function getContos(): Promise<Conto[]> {
     "coverImage": coverImage.asset->url
   }`;
 
-  return await client.fetch(query);
+  return await client.fetch(query, {}, { next: { revalidate: 60 } });
 }
 
 export async function getContoBySlug(slug: string): Promise<Conto | null> {
@@ -43,7 +42,7 @@ export async function getContoBySlug(slug: string): Promise<Conto | null> {
     "coverImage": coverImage.asset->url
   }`;
 
-  return await client.fetch(query, { slug });
+  return await client.fetch(query, { slug }, { next: { revalidate: 60 } });
 }
 
 export async function getFeaturedContos(): Promise<Conto[]> {
@@ -64,5 +63,5 @@ export async function getFeaturedContos(): Promise<Conto[]> {
     "coverImage": coverImage.asset->url
   }`;
 
-  return await client.fetch(query);
+  return await client.fetch(query, {}, { next: { revalidate: 60 } });
 }

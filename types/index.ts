@@ -5,7 +5,7 @@ export interface Conto {
     current: string;
   };
   excerpt: string;
-  content?: any; // Torna o content opcional (já que listagens não carregam o texto completo)
+  content?: string; // Torna o content opcional (já que listagens não carregam o texto completo)
   publishedAt: string;
   tags?: string[]; // Opcional para evitar erros caso venha vazio
   coverImage?: string | {

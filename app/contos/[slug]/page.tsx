@@ -95,7 +95,7 @@ export default async function TaleDetailPage({ params }: PageProps) {
                 <h3 className="font-serif text-xl font-bold uppercase tracking-wider">Notas do Bardo</h3>
               </div>
               <p className="font-sans italic text-ink/70 leading-relaxed">
-                "Dizem que o rei proibiu pergaminhos com luz própria, alegando que retiram a produtividade dos camponeses. Mal sabe ele que estamos todos apenas esperando o próximo episódio das Crônicas de Dragão-Z."
+                &ldquo;Dizem que o rei proibiu pergaminhos com luz própria, alegando que retiram a produtividade dos camponeses. Mal sabe ele que estamos todos apenas esperando o próximo episódio das Crônicas de Dragão-Z.&rdquo;
               </p>
             </div>
 
