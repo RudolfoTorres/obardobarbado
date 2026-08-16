@@ -56,12 +56,12 @@ export default async function Home() {
                 >
                   Ler o último conto
                 </Link>
-                <Link
+                {/* <Link
                   href="/newsletter"
                   className={cn(buttonVariants.base, buttonVariants.variant.outline, buttonVariants.size.lg, "w-full sm:w-auto text-center")}
                 >
                   Assinar a Gazette
-                </Link>
+                </Link> */}
               </div>
             </div>
 
