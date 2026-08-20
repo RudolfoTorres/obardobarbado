@@ -25,7 +25,7 @@ export default function AboutPage() {
                                     <strong className="text-bardo-purple font-serif text-2xl">Glockenspiel</strong> não é um bardo comum. Primeiro, porque é um anão que prefere a precisão matemática do xilofone à vaguidão das harpas élficas. Segundo, porque sua barba tem um cheiro persistente de cerveja artesanal e tinta fresca.
                                 </p>
                                 <p>
-                                    Nascido nas Montanhas de Ferro, mas criado nas tavernas da metrópole de Nova Arthemis, Glockenspiel encontrou sua vocação: documentar o absurdo. Ele canta sobre carroças que dão erro de sistema, sobre dragões que cobram taxa de entrega e sobre como é difícil encontrar um Wi-Fi estável dentro de uma masmorra.
+                                    Nascido nas Montanhas de Ferro, mas criado nas tavernas da metrópole de Nova Arthemis, Glockenspiel encontrou sua vocação: documentar o absurdo. Ele canta sobre carroças que dão erro de sistema, sobre dragões que cobram taxa de entrega e sobre como é difícil encontrar uma "Conexão Arcana" (Con-Arc®) estável dentro de uma masmorra.
                                 </p>
                                 <div className="grid grid-cols-2 gap-4 py-6 border-y border-wood/10">
                                     <div className="flex items-center gap-2">
@@ -59,7 +59,7 @@ export default function AboutPage() {
                     <section className="bg-ink text-parchment p-12 rounded-sm mb-24">
                         <h2 className="text-3xl font-serif font-bold mb-6 text-gold">A Proposta</h2>
                         <p className="font-sans text-parchment/70 text-lg leading-relaxed">
-                            <strong>O Bardo Barbado</strong> nasceu do desejo de unir dois mundos que, no fundo, são o mesmo: a fantasia épica e o cotidiano moderno. No reino de Glockenspiel, os "Orcs de Operação" (IT Orcs) resolvem bugs em runas de segurança, e os cavaleiros tentam cancelar assinaturas de espelhos mágicos. É uma sátira literária, irônica e, acima de tudo, uma homenagem aos tropos clássicos sob uma lente contemporânea.
+                            <strong>O Bardo Barbado</strong> nasceu do desejo de unir dois mundos que, no fundo, são o mesmo: a fantasia épica e o cotidiano moderno. No reino de Glockenspiel, os "Orcs de Operação" (OrcOps) resolvem bugs em runas de segurança, e os cavaleiros tentam cancelar assinaturas de espelhos mágicos. É uma sátira literária, irônica e, acima de tudo, uma homenagem aos tropos clássicos sob uma lente contemporânea.
                         </p>
                     </section>
 
